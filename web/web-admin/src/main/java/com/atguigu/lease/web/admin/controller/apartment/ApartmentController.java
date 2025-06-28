@@ -64,6 +64,7 @@ public class ApartmentController {
         LambdaUpdateWrapper<ApartmentInfo> updateWrapper = new LambdaUpdateWrapper<>();
         updateWrapper.eq(ApartmentInfo::getId, id);
         updateWrapper.set(ApartmentInfo::getIsRelease, status);
+        service.update(updateWrapper);
         return Result.ok();
     }
 
