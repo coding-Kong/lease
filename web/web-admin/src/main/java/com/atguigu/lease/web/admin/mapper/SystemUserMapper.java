@@ -17,6 +17,7 @@ public interface SystemUserMapper extends BaseMapper<SystemUser> {
 
     IPage<SystemUserItemVo> selectPageSystemUserItem(Page<SystemUserItemVo> page, SystemUserQueryVo queryVo);
 
+    SystemUser selectOneByUsername(String username);
 }
 
 
