@@ -46,7 +46,7 @@ public class RegionController {
         LambdaQueryWrapper<CityInfo> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper.eq(CityInfo::getProvinceId,id);
         List<CityInfo> list = cityInfoService.list(queryWrapper);
-        return Result.ok();
+        return Result.ok(list);
     }
 
     @GetMapping("district/listByCityId")
@@ -55,6 +55,6 @@ public class RegionController {
         LambdaQueryWrapper<DistrictInfo> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper.eq(DistrictInfo::getCityId,id);
         List<DistrictInfo> list = districtInfoService.list(queryWrapper);
-        return Result.ok();
+        return Result.ok(list);
     }
 }
