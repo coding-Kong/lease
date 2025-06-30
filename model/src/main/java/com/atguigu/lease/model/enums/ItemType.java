@@ -11,8 +11,8 @@ public enum ItemType implements BaseEnum {
     ROOM(2, "房间");
 
 
-    @EnumValue
-    @JsonValue
+    @EnumValue //**TypeHandler枚举类型转换**
+    @JsonValue //**HTTPMessageConverter枚举类型转换**
     private Integer code;
     private String name;
 
